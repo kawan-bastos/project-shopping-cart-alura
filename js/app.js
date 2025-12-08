@@ -22,6 +22,8 @@ function adicionar() {
 
     campoTotal.innerText = total.toFixed(2); // Exibe o valor total com duas casas decimais
 
+    limparQuantidade();  
+
     return total;
 }
 
@@ -33,4 +35,9 @@ function limpar(){
     valorTotal.innerHTML = parseFloat(0).toFixed(2); // Zera o valor total e exibe duas casas decimais
     total = 0;
     return total;
+}
+
+
+function limparQuantidade() {
+    document.getElementById("quantidade").value = "";
 }
