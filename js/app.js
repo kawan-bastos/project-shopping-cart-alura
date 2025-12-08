@@ -1,4 +1,5 @@
 let total = 0;
+limpar();
 
 function adicionar() {
     let produto = document.getElementById("produto").value;
@@ -12,10 +13,10 @@ function adicionar() {
       qtdInput = 1; // Define a quantidade mínima como 1
     }
 
-    campoProdutos.innerHTML += `<section class="carrinho__produtos" id="lista-produtos">
-        <section class="carrinho__produtos__produto">
-          <span class="texto-azul">${qtdInput}x</span> ${nome} <span class="texto-azul">R$${valor}</span>
-        </section>`;
+    campoProdutos.innerHTML +=`<section class="carrinho__produtos__produto">
+    <span class="texto-azul">${qtdInput}x</span> ${nome} <span class="texto-azul">R${valor}</span>
+  </section>`;
+       
      
     let subtotal  = valor * qtdInput;
     total += subtotal;
